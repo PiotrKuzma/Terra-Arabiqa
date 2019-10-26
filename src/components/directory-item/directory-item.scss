@@ -1,0 +1,69 @@
+$fresh: #F7EF6A;
+$vermillion: #93C178;
+$sunshine: #465C8B;
+$clean: #DFDCE3;
+$steel: #0A1612;
+$denim: #1A2930;
+$screen: #C5C1C0;
+$fire: #DE0F10;
+$void: #141415;
+$burgund: #6A2126;
+
+
+.directory__item {
+    min-width: 20rem;
+    height: 18rem;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $clean;
+    margin: 0 7.5px 15px;
+    background-position: center;
+    background-size: cover;
+
+    @media only screen and(max-width: 375px) {
+        min-width: 17rem;
+    }
+  
+   
+
+    &__content {
+        height: 6rem;
+        padding: 0 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+        
+        background-image: linear-gradient(to right bottom,
+            rgba($void, 0.7),
+            rgba($burgund, 0.7));
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+
+        &:hover {
+            background-image: linear-gradient(to right bottom,
+            rgba($void, 0.9),
+            rgba($steel, 0.9));
+
+           
+        }
+    
+        .title {
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+          color: $clean;
+          text-transform: uppercase;
+        }
+    
+        .subtitle {
+          
+          font-size: 1rem;
+          color: $clean;
+        }
+      }
+    }
