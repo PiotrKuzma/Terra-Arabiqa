@@ -1,11 +1,21 @@
 .product {
-    width: 22%;
+    min-width: 20rem;
     display: flex;
     flex-direction: column;
-    height: 350px;
+    height: 20rem;
     align-items: center;
 
     padding: 1rem;
+
+    
+
+    @media only screen and(max-width: 1055px) {
+      padding: 1rem;
+      margin: 1rem;
+    }
+    @media only screen and(max-width: 374px) {
+      min-width: 15rem;
+    }
   
     &__image {
       width: 100%;
