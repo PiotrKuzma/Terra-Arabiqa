@@ -1,0 +1,22 @@
+.unibutton {
+    min-width: 3rem;
+    width: 4rem;
+    height: 2rem;
+    letter-spacing: 0.5px;
+    line-height: 2rem;
+    padding: 0 35px 0 35px;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-family: Lato;
+    font-weight: bolder;
+    border: none;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+    }
+  }
