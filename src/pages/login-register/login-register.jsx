@@ -7,6 +7,7 @@ const LoginRegister = () => (
 
     <div className="LogReg">
     <Login />
+    <Login />
     
     </div>
 )

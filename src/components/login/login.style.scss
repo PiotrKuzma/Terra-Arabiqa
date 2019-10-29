@@ -1,10 +1,87 @@
+$fresh: #F7EF6A;
+$vermillion: #93C178;
+$sunshine: #465C8B;
+$clean: #DFDCE3;
+$steel: #0A1612;
+$denim: #1A2930;
+$screen: #C5C1C0;
+$fire: #DE0F10;
+$void: #141415;
+$burgund: #6A2126;
+
+
+
+
 .login {
     width: 30vw;
+    height: 25rem;
     display: flex;
     flex-direction: column;
+    
+    align-content: center;
+    align-items: center;
+    padding: 2rem;
 
-    form {
+    @media only screen and(max-width: 835px) {
+        
+    width: 100%; }
+
+
+    &__title {
+        font-family: Lato;
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+
+    }
+
+    &__span {
+        font-family: Lato;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .form {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        align-content: center;
+        align-items: center;
+        
+        margin-bottom: 1rem;
+
+        
+
+        &__input {
+            font-family: Lato, sans-serif;
+            color: inherit;
+            font-size: 1rem;
+            padding: 0.5rem 0.5rem;
+            border-radius: 0.3rem;
+            background-color: rgba($clean, 0.5);
+            border: none;
+            border-bottom: 3px solid transparent;
+            width: 15rem;
+            display: block;
+            margin-bottom: 1rem;
+
+            
+
+        }
+
+        &__label {
+            margin-bottom: 0.5rem;
+            font-family: Lato;
+            font-weight: 600;
+            font-size: 0.7rem;
+        }
+
+        .unibutton {
+
+        }
+        .google {
+
+        }
     }
 }

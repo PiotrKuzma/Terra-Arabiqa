@@ -23,7 +23,7 @@ const Header = ( {appUser}) => (
             <Link to="/sklep" className="header__navigation__link">Kontakt</Link>
             {
                 appUser ? (
-                <div className="header__navigation__link"
+                <div className="header__navigation__link logout"
                 onClick={() => auth.signOut()}
                 >
                 Wyloguj

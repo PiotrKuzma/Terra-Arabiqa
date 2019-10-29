@@ -37,13 +37,13 @@ class Login extends React.Component {
     render() {
         return(
             <div className="login">
-                <h2>Posiadam konto</h2>
-                <span>Zaloguj za pomocą email i hasła</span>
-                <form
+                <h2 className="login__title">Posiadam konto</h2>
+                <span className="login__span">Zaloguj się za pomocą email i hasła</span>
+                <form className="form"
                 onSubmit={this.handleSubmit}
                 
                 >
-                    <Input 
+                    <Input className="form__input"
                     name="email" 
                     type="email" 
                     value={this.state.email} 
@@ -52,8 +52,8 @@ class Login extends React.Component {
                     
                     />
 
-                    <label>Email</label>
-                    <Input 
+                    <label className="form__label">Email</label>
+                    <Input className="form__input"
                     name="hasło" 
                     type ="password" 
                     value={this.state.hasło} 
@@ -63,10 +63,10 @@ class Login extends React.Component {
                     
                     />
 
-                    <label>Hasło</label>
+                    <label className="form__label">Hasło</label>
 
-                    <UniButton type="submit" >Zaloguj</UniButton>
-                    <UniButton onClick={signInWithGoogle} >Google</UniButton>
+                    <UniButton className="unibutton" type="submit" >Zaloguj</UniButton>
+                    <UniButton className="unibutton" onClick={signInWithGoogle} >Google</UniButton>
                     
                     
                     
