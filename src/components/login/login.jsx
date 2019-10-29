@@ -4,6 +4,8 @@ import './login.style.scss'
 import Input from '../../components/input/input'
 import UniButton from '../../components/uniButton/uniButton'
 
+import { signInWithGoogle } from '../../firebase/firebase.utils'
+
 class Login extends React.Component {
     constructor(props) {
         super(props)
@@ -64,6 +66,7 @@ class Login extends React.Component {
                     <label>Hasło</label>
 
                     <UniButton type="submit" >Zaloguj</UniButton>
+                    <UniButton onClick={signInWithGoogle} >Google</UniButton>
                     
                     
                     

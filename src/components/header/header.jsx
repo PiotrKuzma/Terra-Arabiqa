@@ -5,9 +5,10 @@ import './header.style.scss'
 
 import { Link } from 'react-router-dom'
 import {ReactComponent as Logo } from '../../assets/coffee-maker.svg'
+import {auth} from '../../firebase/firebase.utils'
 
 
-const Header = () => (
+const Header = ( {appUser}) => (
    
     
     <div className="header">
@@ -18,8 +19,19 @@ const Header = () => (
         
 
         <div className="header__navigation">
-            <Link to="/sklep" className="header__navigation--shop" >Sklep</Link>
-            <Link to="/sklep" className="header__navigation--contact">Kontakt</Link>
+            <Link to="/sklep" className="header__navigation__link" >Sklep</Link>
+            <Link to="/sklep" className="header__navigation__link">Kontakt</Link>
+            {
+                appUser ? (
+                <div className="header__navigation__link"
+                onClick={() => auth.signOut()}
+                >
+                Wyloguj
+                </div> 
+                ) : (
+                <Link className="header__navigation__link" to="/logowanie">Zaloguj</Link>
+                )
+            }
         
         </div>
 

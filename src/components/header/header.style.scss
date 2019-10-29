@@ -57,23 +57,17 @@
         flex-direction: column;
         }
   
-      &--shop {
+      &__link{
         padding: 10px 15px;
         text-decoration: none;
         font-size: 1rem;
         font-family: Lato;
         text-transform: uppercase;
         color: black;
+        cursor: pointer;
         
       }
-      &--contact {
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 1rem;
-        font-family: Lato;
-        text-transform: uppercase;
-        color: black;
-      }
+      
     }
   }
   
