@@ -6,7 +6,7 @@ import Home from './pages/home/Home'
 
 import Shop from './pages/shop/shop'
 import LoginRegister from './pages/login-register/login-register'
-import {auth} from './firebase/firebase.utils'
+import {auth, createProfileDoc} from './firebase/firebase.utils'
 
 import { Switch, Route } from 'react-router-dom'
 
@@ -24,8 +24,24 @@ class App extends React.Component {
   unsubscribe = null
 
   componentDidMount() {
-    this.unsubscribe = auth.onAuthStateChanged(user => {
-      this.setState({appUser: user})
+    this.unsubscribe = auth.onAuthStateChanged(async userAuth => {
+      if (userAuth) {
+        const userReference = await createProfileDoc(userAuth)
+        userReference.onSnapshot(snapShot => {
+          this.setState({
+            appUser: {
+              id: snapShot.id,
+              ...snapShot.data()
+            }
+          })
+        })
+      }
+
+      else {
+        this.setState({
+          appUser: userAuth
+        })
+      }
 
       
     })
