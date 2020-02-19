@@ -14,13 +14,14 @@ $burgund: #6A2126;
 
 .register {
     width: 30vw;
-    height: 25rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     
     align-content: center;
     align-items: center;
-    padding: 2rem;
+    justify-content: center;
+   
 
     @media only screen and(max-width: 835px) {
         

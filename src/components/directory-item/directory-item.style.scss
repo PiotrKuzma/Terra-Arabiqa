@@ -21,6 +21,7 @@ $burgund: #6A2126;
     margin: 0.5rem 1rem;
     background-position: center;
     background-size: cover;
+    
 
     @media only screen and(max-width: 623px) {
       margin: 0.2rem;
@@ -43,8 +44,8 @@ $burgund: #6A2126;
         
         
         background-image: linear-gradient(to right bottom,
-            rgba($void, 0.7),
-            rgba($burgund, 0.7));
+            rgba($void, 1),
+            rgba($burgund, 0.2));
         cursor: pointer;
         transition: all 0.3s ease;
         
