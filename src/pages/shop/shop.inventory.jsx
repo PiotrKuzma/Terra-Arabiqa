@@ -75,13 +75,13 @@
         {
           id: 4,
           name: 'Kawiarka Bialetti',
-          imageUrl: 'https://www.cafeamor.pl/userdata/gfx/374aebb4a9433f9b601f2c0ba821520a.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1572119243889-4939ec2ced2c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           price: 160
         },
         {
           id: 5,
           name: 'French Press Bialetti',
-          imageUrl: 'https://www.cafeamor.pl/userdata/gfx/9093390ced02722ff9d22b59d7e25265.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1524424177250-5f178b523ebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
           price: 160
         }
         
@@ -95,31 +95,31 @@
         {
           id: 1,
           name: 'Czajnik Stalowy',
-          imageUrl: 'https://www.cafeamor.pl/environment/cache/images/300_300_productGfx_3473a8116bf4ffe43af370a63707c520.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1545341122-731b14aa40f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
           price: 125
         },
         {
           id: 2,
           name: 'Filtry Papierowe Chemex x100',
-          imageUrl: 'https://www.cafeamor.pl/environment/cache/images/300_300_productGfx_b9b3eeefdbae626ab245ff6f359baf89.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1517032172944-b38d9b92bc20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
           price: 90
         },
         {
           id: 3,
           name: 'Filtry Papierowe Drip x60',
-          imageUrl: 'https://www.cafeamor.pl/environment/cache/images/300_300_productGfx_3f565f959e085812027306eebdb2f9b4.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1519307608401-1a6a9083c4a2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
           price: 90
         },
         {
           id: 4,
           name: 'Młynek do Kawy',
-          imageUrl: 'https://www.cafeamor.pl/environment/cache/images/300_300_productGfx_f288982cfbbc594d79ff976ffbe72afe.jpg',
+          imageUrl: 'https://images.unsplash.com/photo-1581446974083-41ed1a460587?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
           price: 165
         },
         {
           id: 5,
           name: 'Dzbanek do Kawy',
-          imageUrl: 'https://www.cafeamor.pl/environment/cache/images/300_300_productGfx_658/1a55428eb77e6587cd791d5304b16dd7.jpg',
+          imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
           price: 185
         },
         {

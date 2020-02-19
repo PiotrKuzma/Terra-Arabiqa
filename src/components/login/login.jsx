@@ -4,7 +4,7 @@ import './login.style.scss'
 import Input from '../../components/input/input'
 import UniButton from '../../components/uniButton/uniButton'
 
-import { signInWithGoogle } from '../../firebase/firebase.utils'
+import { signInWithGoogle, auth } from '../../firebase/firebase.utils'
 
 class Login extends React.Component {
     constructor(props) {
@@ -19,12 +19,23 @@ class Login extends React.Component {
        
     }
 
-    handleSubmit = event => {
+    handleSubmit = async event => {
         event.preventDefault()
-        this.setState( {
-            email: "",
-            hasło: ""
-        })
+        const { email, password } = this.state
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password)
+            this.setState( {
+                email: "",
+                password: ""
+            })
+
+        }
+
+        catch (error){
+            console.log(error)
+        }
+        
     }
 
     handleChange = event => {
@@ -54,9 +65,9 @@ class Login extends React.Component {
 
                     <label className="form__label">Email</label>
                     <Input className="form__input"
-                    name="hasło" 
+                    name="password" 
                     type ="password" 
-                    value={this.state.hasło} 
+                    value={this.state.password} 
                     required
                     handleChange={this.handleChange}
                     
