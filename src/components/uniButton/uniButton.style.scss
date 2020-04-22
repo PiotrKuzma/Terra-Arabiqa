@@ -1,36 +1,33 @@
 $void: #141415;
-$burgund: #6A2126;
-
+$burgund: #6a2126;
 
 .unibutton {
-    min-width: 3rem;
-    width: 6rem;
-    height: 2rem;
-    letter-spacing: 0.5px;
-    line-height: 2rem;
-    padding: 0 35px 0 35px;
-    font-size: 15px;
-    background: none;
-    color: $void;
-    text-transform: uppercase;
-    font-family: Nunito;
-    font-weight: bolder;
-    border: 2px solid $burgund;
-    cursor: pointer;
-    margin-bottom:1.3rem;
-    transition: all 0.15s ease-in-out;
-  
-    &:hover {
-      
-      
-      box-shadow: -5px 6px 6px -1px $burgund;
-      
-    }
+  min-width: 3rem;
+  width: 6rem;
+  height: 2rem;
+  letter-spacing: 0.5px;
 
-    &:focus { outline: none; }
-    &:active { 
-      transform: translateY(2px);
-      box-shadow: -1px 1px 1px -1px $burgund;
-    
-    }
+  padding: 5px 35px 5px 35px;
+
+  background: none;
+  color: $void;
+
+  font-family: Nunito;
+  font-weight: bolder;
+  border: 2px solid $burgund;
+  cursor: pointer;
+  margin-bottom: 1.3rem;
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    box-shadow: -5px 6px 6px -1px $burgund;
   }
+
+  &:focus {
+    outline: none;
+  }
+  &:active {
+    transform: translateY(2px);
+    box-shadow: -1px 1px 1px -1px $burgund;
+  }
+}

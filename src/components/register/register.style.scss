@@ -1,84 +1,70 @@
-$fresh: #F7EF6A;
-$vermillion: #93C178;
-$sunshine: #465C8B;
-$clean: #DFDCE3;
-$steel: #0A1612;
-$denim: #1A2930;
-$screen: #C5C1C0;
-$fire: #DE0F10;
+$fresh: #f7ef6a;
+$vermillion: #93c178;
+$sunshine: #465c8b;
+$clean: #dfdce3;
+$steel: #0a1612;
+$denim: #1a2930;
+$screen: #c5c1c0;
+$fire: #de0f10;
 $void: #141415;
-$burgund: #6A2126;
-
-
-
+$burgund: #6a2126;
 
 .register {
-    width: 30vw;
-    height: auto;
+  width: 30vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+
+  @media only screen and(max-width: 835px) {
+    width: 100%;
+  }
+
+  &__title {
+    font-family: Nunito;
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    margin-bottom: 1rem;
+  }
+
+  &__span {
+    font-family: Nunito;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .form {
     display: flex;
     flex-direction: column;
-    
+    width: 100%;
     align-content: center;
     align-items: center;
-    justify-content: center;
-   
 
-    @media only screen and(max-width: 835px) {
-        
-    width: 100%; }
+    margin-bottom: 1rem;
 
-
-    &__title {
-        font-family: Nunito;
-        font-size: 1.8rem;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-
+    &__input {
+      font-family: Nunito, sans-serif;
+      color: inherit;
+      font-size: 1rem;
+      padding: 0.5rem 0.5rem;
+      border-radius: 0.3rem;
+      background-color: rgba($clean, 0.5);
+      border: none;
+      border-bottom: 3px solid transparent;
+      width: 15rem;
+      display: block;
+      margin-bottom: 1rem;
     }
 
-    &__span {
-        font-family: Nunito;
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
+    &__label {
+      margin-bottom: 0.5rem;
+      font-family: Nunito;
+      font-weight: 600;
+      font-size: 0.7rem;
     }
-
-    .form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        align-content: center;
-        align-items: center;
-        
-        margin-bottom: 1rem;
-
-        
-
-        &__input {
-            font-family: Nunito, sans-serif;
-            color: inherit;
-            font-size: 1rem;
-            padding: 0.5rem 0.5rem;
-            border-radius: 0.3rem;
-            background-color: rgba($clean, 0.5);
-            border: none;
-            border-bottom: 3px solid transparent;
-            width: 15rem;
-            display: block;
-            margin-bottom: 1rem;
-
-            
-
-        }
-
-        &__label {
-            margin-bottom: 0.5rem;
-            font-family: Nunito;
-            font-weight: 600;
-            font-size: 0.7rem;
-        }
-
-        
-       
-    }
+  }
 }

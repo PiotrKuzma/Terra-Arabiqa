@@ -1,75 +1,71 @@
 $void: #141415;
+$burgund: #6a2126;
 
 .header {
-    height: 3rem;
-    max-width: 90%;
-    display: flex;
-    justify-content: space-between;
-    
-    align-items: center; 
-    margin: 0 auto;
-    padding: 1.5rem;
+  height: 3rem;
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  margin: 0 auto;
+  padding: 1.5rem;
+
+  @media only screen and(max-width: 835px) {
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+
+  &__logo-container {
+    height: 100%;
+    width: 3.5rem;
+    padding: 25px;
+  }
+
+  &__title {
+    font-family: Nunito;
+    font-weight: 400;
+    margin-right: 8rem;
 
     @media only screen and(max-width: 835px) {
-        flex-direction: column;
-        justify-content: center;
-        height: auto;
+      margin: 0;
     }
-  
-    &__logo-container {
-      height: 100%;
-      width: 3.5rem;
-      padding: 25px;
-      
-
-      
-
-      
-    }
-
-    &__title {
-       font-family: Nunito;
-       font-weight: 400;
-       text-transform: uppercase;
-       margin-right: 8rem;
-
-       @media only screen and(max-width: 835px) {
-        margin: 0;
-        }
-        @media only screen and(max-width: 374px) {
-            font-size: 1.5rem;
-        }
-    }
-
-   
-  
-    &__navigation {
-      width: 50%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding-right: 1rem;
-
-      @media only screen and(max-width: 835px) {
-        width: 100%;
-        padding-right: 0;
-        justify-content: center;
-        margin-top: 1rem;
-        flex-direction: column;
-        }
-  
-      &__link{
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 1.3rem;
-        font-family: Nunito;
-        font-weight: 400;
-        color: $void;
-        cursor: pointer;
-        
-      }
-      
+    @media only screen and(max-width: 374px) {
+      font-size: 1.5rem;
     }
   }
-  
+
+  &__navigation {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+
+    @media only screen and(max-width: 835px) {
+      width: 100%;
+      padding-right: 0;
+      justify-content: center;
+      margin-top: 1rem;
+      flex-direction: column;
+    }
+
+    &__link {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-family: Nunito;
+      font-weight: 700;
+      color: $void;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+
+      &:hover {
+        color: $burgund;
+       
+      }
+    }
+  }
+}
