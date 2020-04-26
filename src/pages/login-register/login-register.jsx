@@ -1,16 +1,14 @@
-import React from "react"
+import React from "react";
 
-import './login-register.style.scss'
-import Login from '../../components/login/login'
-import Register from '../../components/register/register'
+import "./login-register.style.scss";
+import Login from "../../components/login/login";
+import Register from "../../components/register/register";
 
 const LoginRegister = () => (
-
-    <div className="LogReg">
+  <div className="LogReg">
     <Login />
     <Register />
-    
-    </div>
-)
+  </div>
+);
 
-export default LoginRegister
+export default LoginRegister;

@@ -1,33 +1,27 @@
 .preview {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+
+  &__title {
+    font-size: 2rem;
     margin-bottom: 3rem;
-    margin-top: 3rem;
-  
-    &__title {
-      font-size: 2rem;
-      margin-bottom: 3rem;
-      text-transform: uppercase;
-      font-family: Nunito;
-      text-align: center;
-    }
-  
-    &__item {
-      display: flex;
+    text-transform: uppercase;
+    font-family: Nunito;
+    text-align: center;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+
+    @media only screen and(max-width: 1088px) {
+      flex-direction: column;
       justify-content: center;
+      justify-items: center;
 
-      @media only screen and(max-width: 1088px) {
-        flex-direction: column;
-        justify-content: center;
-        justify-items: center;
-        
-        flex-flow: wrap;
-      }
-
-      
-      
-      
-
-
+      flex-flow: wrap;
     }
   }
+}
