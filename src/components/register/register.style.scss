@@ -24,7 +24,7 @@ $burgund: #6a2126;
   }
 
   &__title {
-    font-family: Nunito;
+    font-family: Prompt;
     font-size: 1.8rem;
     font-weight: 400;
 
@@ -32,7 +32,7 @@ $burgund: #6a2126;
   }
 
   &__span {
-    font-family: Nunito;
+    font-family: Dosis;
     font-size: 1.3rem;
     margin-bottom: 1rem;
   }
@@ -47,7 +47,7 @@ $burgund: #6a2126;
     margin-bottom: 1rem;
 
     &__input {
-      font-family: Nunito, sans-serif;
+      font-family: Prompt, sans-serif;
       color: inherit;
       font-size: 1rem;
       padding: 0.5rem 0.5rem;
@@ -62,9 +62,10 @@ $burgund: #6a2126;
 
     &__label {
       margin-bottom: 0.5rem;
-      font-family: Nunito;
-      font-weight: 600;
-      font-size: 0.7rem;
+      font-family: Prompt;
+      letter-spacing: 2px;
+      font-weight: 500;
+      font-size: 0.9rem;
     }
   }
 }
