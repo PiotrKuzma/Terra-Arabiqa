@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./product.style.scss";
 
 const Product = ({ id, name, price, imageUrl }) => (

@@ -1,7 +1,5 @@
 import React from "react";
-
 import "./preview.style.scss";
-
 import Product from "../product/product";
 
 const Preview = ({ title, items }) => (

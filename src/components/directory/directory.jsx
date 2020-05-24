@@ -1,7 +1,5 @@
 import React from "react";
-
 import DirectoryItem from "../directory-item/directory-item";
-
 import "./directory.style.scss";
 
 class Directory extends React.Component {

@@ -6,9 +6,6 @@ const Input = ( { handleChange, label, ...rest }) => (
     <div className="group">
         <input className="group__input"
         onChange={handleChange} {...rest} />
-        
-        
-    
     </div>
 )
 

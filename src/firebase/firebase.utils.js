@@ -14,15 +14,11 @@ const config = {
 
 export const createProfileDoc = async (userAuth, additional) => {
   if (!userAuth) return;
-
   const userReference = firestore.doc(`users/${userAuth.uid}`);
-
   const snap = await userReference.get();
-
   if (!snap.exists) {
     const { displayName, email } = userAuth;
     const creationDate = new Date();
-
     try {
       await userReference.set({
         displayName,
@@ -38,14 +34,9 @@ export const createProfileDoc = async (userAuth, additional) => {
 };
 
 firebase.initializeApp(config);
-
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
-
 const provider = new firebase.auth.GoogleAuthProvider();
-
 provider.setCustomParameters({ prompt: "select_account" });
-
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
-
 export default firebase;

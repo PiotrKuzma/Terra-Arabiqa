@@ -1,5 +1,4 @@
 import React from "react";
-
 import ShopInventory from "./shop.inventory";
 import Preview from "../../components/preview/preview";
 

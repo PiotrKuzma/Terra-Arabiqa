@@ -1,9 +1,7 @@
 import React from "react";
-
 import "./login.style.scss";
 import Input from "../../components/input/input";
 import UniButton from "../../components/uniButton/uniButton";
-
 import { signInWithGoogle, auth } from "../../firebase/firebase.utils";
 
 class Login extends React.Component {

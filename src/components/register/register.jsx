@@ -89,7 +89,6 @@ class Register extends React.Component {
             onChange={this.handleChange}
             required
           ></Input>
-
           <UniButton className="unibutton" type="submit">
             Zarejestruj
           </UniButton>
