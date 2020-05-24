@@ -7,7 +7,7 @@ import LoginRegister from "./pages/login-register/login-register";
 import { auth, createProfileDoc } from "./firebase/firebase.utils";
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 
 class App extends React.Component {
 
@@ -43,15 +43,29 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/sklep" component={Shop} />
-          <Route path="/logowanie" component={LoginRegister} />
+          <Route
+          exact
+          path="/logowanie"
+          render={() =>
+            this.props.appUser ? (
+            <Redirect to="/"/>
+            ):(
+            <LoginRegister/>
+            )
+          }
+          />
         </Switch>
       </div>
     );
   }
 }
 
+const mapStateToProps = ({user}) => ({
+  appUser: user.appUser
+})
+
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
 
-export default connect(null, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

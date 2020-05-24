@@ -2,10 +2,12 @@ import React from "react";
 import "./header.style.scss";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/coffee-maker.svg";
+import CartIcon from '../cart-icon/cart-icon';
+import CartDropdown from '../cart-dropdown/cart-dropdown';
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from 'react-redux';
 
-const Header = ({ appUser }) => (
+const Header = ({ appUser, hidden }) => (
   <div className="header">
     <Link to="/" className="header__logo-container">
       <Logo className="logo" />
@@ -30,12 +32,15 @@ const Header = ({ appUser }) => (
           Zaloguj
         </Link>
       )}
+      <CartIcon/>
     </div>
+    { hidden? null : <CartDropdown/> }
   </div>
 );
 
-const mapStateToProps = state => ({
-  appUser: state.user.appUser
+const mapStateToProps = ({user: {appUser}, cart: {hidden}}) => ({
+  appUser,
+  hidden
 })
 
 export default connect(mapStateToProps)(Header);
