@@ -5,7 +5,7 @@ import './cart-dropdown.scss';
 const CartDropdown = () => (
     <div className="cart-dropdown">
         <div className="cart-items"/>
-        <Unibutton>Do koszyka</Unibutton>
+        <Unibutton>Przejdź do koszyka</Unibutton>
     </div>
 )
 

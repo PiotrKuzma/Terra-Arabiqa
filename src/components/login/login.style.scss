@@ -1,5 +1,4 @@
 $fresh: #f7ef6a;
-$vermillion: #93c178;
 $sunshine: #465c8b;
 $clean: #dfdce3;
 $steel: #0a1612;
@@ -24,7 +23,7 @@ $burgund: #6a2126;
   }
 
   &__title {
-    font-family: Prompt;
+    font-family: Nunito;
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 1rem;
@@ -46,7 +45,7 @@ $burgund: #6a2126;
     margin-bottom: 1rem;
 
     &__input {
-      font-family: Prompt, sans-serif;
+      font-family: Dosis, sans-serif;
       color: inherit;
       font-size: 1rem;
       padding: 0.5rem 0.5rem;
@@ -61,7 +60,7 @@ $burgund: #6a2126;
 
     &__label {
       margin-bottom: 0.5rem;
-      font-family: Prompt;
+      font-family: Dosis;
       font-weight: 500;
       letter-spacing: 2px;
       font-size: 0.9rem;
