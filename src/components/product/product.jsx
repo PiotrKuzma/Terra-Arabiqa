@@ -1,6 +1,6 @@
 import React from "react";
 import "./product.style.scss";
-import Unibutton from '../uniButton/uniButton';
+import { ReactComponent as Purchase } from "../../assets/purchase.svg";
 
 
 
@@ -16,9 +16,9 @@ const Product = ({ id, name, price, imageUrl }) => (
       <span className="product__footer--name">{name}</span>
       <span className="product__footer--price">{price}zł</span>
     </div>
-    <div className="product__purchase">
-    <Unibutton>Kupuję</Unibutton>
-    </div>
+    <button className="product__purchase">
+    <Purchase className="product__purchase__icon"/>
+    </button>
   </div>
 );
 
