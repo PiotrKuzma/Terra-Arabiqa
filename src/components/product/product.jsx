@@ -1,10 +1,12 @@
 import React from "react";
 import "./product.style.scss";
 import { ReactComponent as Purchase } from "../../assets/purchase.svg";
+import { connect } from 'react-redux';
+import { addItemToCartArray } from '../../redux/cart/cart.actions';
 
-
-
-const Product = ({ id, name, price, imageUrl }) => (
+const Product = ({ item, addItemToCartArray }) => {
+  const { name, price, imageUrl } = item
+  return (
   <div className="product">
     <div
       className="product__image"
@@ -16,10 +18,20 @@ const Product = ({ id, name, price, imageUrl }) => (
       <span className="product__footer--name">{name}</span>
       <span className="product__footer--price">{price}zł</span>
     </div>
-    <button className="product__purchase">
-    <Purchase className="product__purchase__icon"/>
+    <button className="product__purchase"
+      onClick={() => addItemToCartArray(item)}
+    >
+      <Purchase className="product__purchase__icon"/>
+      <p className="product__purchase__text">Dodaj do koszyka</p>
     </button>
   </div>
-);
+  )
+};
 
-export default Product;
+const mapDispatchToProps = dispatch => ({
+  addItemToCartArray: item => dispatch(addItemToCartArray(item))
+})
+
+export default connect(null, mapDispatchToProps)(Product);
+
+

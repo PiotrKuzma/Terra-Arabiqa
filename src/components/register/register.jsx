@@ -19,7 +19,7 @@ class Register extends React.Component {
   handleSubmit = async (event) => {
     event.preventDefault();
     const { displayName, email, password, passwordConfirm } = this.state;
-    if (password != passwordConfirm) {
+    if (password !== passwordConfirm) {
       alert("Hasła nie zgadzają się.");
       return;
     }

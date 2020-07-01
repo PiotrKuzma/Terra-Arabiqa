@@ -8,8 +8,8 @@ const Preview = ({ title, items }) => (
     <div className="preview__item">
       {items
         .filter((item, idx) => idx < 3)
-        .map(({ id, ...rest }) => (
-          <Product key={id} {...rest} />
+        .map((item) => (
+          <Product key={item.id} item = {item}/>
         ))}
     </div>
   </div>

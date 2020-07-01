@@ -13,12 +13,29 @@ $xanadu: #808F85;
   align-items: center;
   justify-content: center;
   margin: 0.5rem 1rem;
-  background-position: center;
-  background-size: cover;
   border-radius: 10px 10px 10px 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
-	-moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    cursor: pointer;
+    .directory__item__background {
+      transform: scale(1.05);
+      transition: transform 2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+    }
+  }
+
+  &__background {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transform: scale(1.0);
+  }
 
 
   @media only screen and(max-width: 623px) {
@@ -30,8 +47,9 @@ $xanadu: #808F85;
   }
 
   &__content {
-    width: 99%;
-    height: 30%;
+    position: absolute;
+    height: 99%;
+    width:99%;
     padding: 0 25px;
     display: flex;
     flex-direction: column;
@@ -39,22 +57,12 @@ $xanadu: #808F85;
     justify-content: center;
     background-image: linear-gradient(
       to right bottom,
-      rgba($void, 0.5),
+      rgba($darkpurple, 0.1),
       rgba(transparent, 0.9)
     );
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &:hover {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba($void, 0.9),
-        rgba($burgund, 0.9)
-      );
-    }
 
     .title {
-      font-weight: 500;
+      font-weight: 700;
       margin-bottom: 0.5rem;
       font-size: 1.5rem;
       color: $timberwolf;

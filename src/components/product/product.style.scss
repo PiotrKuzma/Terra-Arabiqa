@@ -18,8 +18,6 @@ $xanadu: #808F85;
     min-width: 15rem;
   }
 
-
-
   &__image {
     width: 100%;
     height: 95%;
@@ -27,29 +25,30 @@ $xanadu: #808F85;
     background-position: center;
     margin-bottom: 5px;
     border-radius: 10px 10px 10px 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 5px $void;
   }
 
   &__purchase {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
     outline: none;
     border-color: transparent;
     cursor: pointer;
-    border-radius: 10px 10px 10px 10px;
-    background-image: linear-gradient(to right bottom, rgba($timberwolf, 0.9), rgba(white, 0.9));
+    border-radius: 10px 0px 0px 0px;
+    background-image: linear-gradient(to right bottom, rgba($void, 0.9), rgba($darkpurple, 0.9));
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     transform: translate(-100%, -100%);
-    padding: 0.5rem;
+    padding: 0.7rem;
     transition: 0.2s linear;
     &:hover {
       background-image: linear-gradient(to right bottom, rgba($void, 0.9), rgba($burgund, 0.9));
       .product__purchase__icon{
         fill: $timberwolf;
+      }
+      .product__purchase__text{
+        color: $timberwolf;
       }
     }
     &:focus {
@@ -58,6 +57,7 @@ $xanadu: #808F85;
     &:active {
       .product__purchase__icon{
         transform: translateY(2px);
+        transform: scale(1.5);
       }
     }
     @media only screen and(max-width: 835px) {
@@ -65,10 +65,17 @@ $xanadu: #808F85;
     }
 
     &__icon {
-      fill: $void;
-      width: 2rem;
-      height: 2rem;
+      fill: $timberwolf;
+      width: 1rem;
+      height: 1rem;
       transition: transform 0.1s linear;
+      margin-bottom: 5px;
+    }
+    &__text {
+      font-weight: 700;
+      font-family: Nunito;
+      font-size: 0.7rem;
+      color: $timberwolf;
     }
   }
 
@@ -85,9 +92,6 @@ $xanadu: #808F85;
     display: flex;
     justify-content: space-around;
     font-size: 18px;
-
-
-
 
     &--name {
       width: 90%;
