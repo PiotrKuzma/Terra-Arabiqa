@@ -44,15 +44,15 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/sklep" component={Shop} />
           <Route
-          exact
-          path="/logowanie"
-          render={() =>
+            exact
+            path="/logowanie"
+            render={() =>
             this.props.appUser ? (
             <Redirect to="/"/>
             ):(
             <LoginRegister/>
             )
-          }
+            }
           />
         </Switch>
       </div>

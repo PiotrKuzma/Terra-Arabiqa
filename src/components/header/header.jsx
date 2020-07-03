@@ -10,27 +10,21 @@ import { connect } from 'react-redux';
 const Header = ({ appUser, hidden }) => (
   <div className="header">
     <Link to="/" className="header__logo-container">
-      <Logo className="logo" />
+      <Logo className="header__logo-container__logo"/>
+      <h1 className="header__logo-container__title">Terra Arabiqa</h1>
     </Link>
-    <h1 className="header__title">Terra Arabiqa</h1>
     <div className="header__navigation">
-      <Link to="/sklep" className="header__navigation__link">
-        Sklep
-      </Link>
-      <Link to="/sklep" className="header__navigation__link">
-        Kontakt
-      </Link>
+      <Link to="/sklep" className="header__navigation__link">Sklep</Link>
+      <Link to="/sklep" className="header__navigation__link">Kontakt</Link>
       {appUser ? (
         <div
           className="header__navigation__link logout"
           onClick={() => auth.signOut()}
         >
-          Wyloguj
+        Wyloguj
         </div>
       ) : (
-        <Link className="header__navigation__link" to="/logowanie">
-          Zaloguj
-        </Link>
+        <Link className="header__navigation__link" to="/logowanie">Zaloguj</Link>
       )}
       <CartIcon/>
     </div>
