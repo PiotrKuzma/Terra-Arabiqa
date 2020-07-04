@@ -19,6 +19,12 @@
       display: flex;
       flex-direction: column;
       overflow: scroll;
+
+      &__empty {
+        font-family: Nunito;
+        font-weight: 700;
+        text-align: center;
+      }
     }
 
     button {

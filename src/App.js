@@ -8,6 +8,8 @@ import { auth, createProfileDoc } from "./firebase/firebase.utils";
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 import { Switch, Route, Redirect } from "react-router-dom";
+import { selectCurrentUser } from '../src/redux/user/user.selectors'
+import Checkout from '../src/pages/checkout/checkout';
 
 class App extends React.Component {
 
@@ -54,14 +56,15 @@ class App extends React.Component {
             )
             }
           />
+           <Route exact path="/checkout" component={Checkout} />
         </Switch>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({user}) => ({
-  appUser: user.appUser
+const mapStateToProps = (state) => ({
+  appUser: selectCurrentUser(state)
 })
 
 const mapDispatchToProps = dispatch => ({
