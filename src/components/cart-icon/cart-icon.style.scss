@@ -13,6 +13,11 @@ $xanadu: #808F85;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 1s linear;
+    &:hover .shopping-icon{
+      fill: $burgund;
+      transform: scale(1.05);
+    }
 
     .shopping-icon {
       width: 35px;
