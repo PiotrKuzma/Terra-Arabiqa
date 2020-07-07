@@ -10,6 +10,7 @@ import { setCurrentUser } from './redux/user/user.actions';
 import { Switch, Route, Redirect } from "react-router-dom";
 import { selectCurrentUser } from '../src/redux/user/user.selectors'
 import Checkout from '../src/pages/checkout/checkout';
+import { AnimatePresence } from 'framer-motion';
 
 class App extends React.Component {
 
@@ -39,9 +40,11 @@ class App extends React.Component {
   }
 
   render() {
+
     return (
       <div className="wrapper">
         <Header/>
+        <AnimatePresence exitBeforeEnter>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/sklep" component={Shop} />
@@ -58,6 +61,7 @@ class App extends React.Component {
           />
            <Route exact path="/checkout" component={Checkout} />
         </Switch>
+        </AnimatePresence>
       </div>
     );
   }
