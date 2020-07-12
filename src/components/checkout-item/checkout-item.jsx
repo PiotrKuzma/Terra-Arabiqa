@@ -1,8 +1,12 @@
 import React from 'react';
 import './checkout-item.style.scss';
 import { ReactComponent as Remove } from '../../assets/remove.svg';
+import {connect} from 'react-redux';
+import { deleteItemFromCart } from '../../redux/cart/cart.actions';
 
-const CheckoutItem = ({ item : { name, price, quantity, imageUrl }}) => (
+const CheckoutItem = ({ item, deleteItem }) => {
+    const { name, price, quantity, imageUrl } = item
+    return (
     <div className="checkout-item">
         <div className="checkout-item__img-container">
             <img className="checkout-item__img-container__image"
@@ -10,13 +14,16 @@ const CheckoutItem = ({ item : { name, price, quantity, imageUrl }}) => (
                 src={imageUrl}
             />
         </div>
-        <spa className="checkout-item__name">{name}</spa>
-        <spa className="checkout-item__price">{price} zł</spa>
-        <spa className="checkout-item__quantity">{quantity}</spa>
+        <span className="checkout-item__name">{name}</span>
+        <span className="checkout-item__price">{price} zł</span>
+        <span className="checkout-item__quantity">{quantity}</span>
         <button className="checkout-item__remove">
-            <Remove className="checkout-item__remove__icon"/>
+            <Remove className="checkout-item__remove__icon" onClick={() => deleteItem(item)}/>
         </button>
     </div>
-)
+) }
 
-export default CheckoutItem;
+const mapDispatchToProps = dispatch => ({
+    deleteItem: item => dispatch(deleteItemFromCart(item))
+})
+export default connect(null, mapDispatchToProps) (CheckoutItem);

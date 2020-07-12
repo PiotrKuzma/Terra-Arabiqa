@@ -44,7 +44,7 @@ class App extends React.Component {
     return (
       <div className="wrapper">
         <Header/>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/sklep" component={Shop} />

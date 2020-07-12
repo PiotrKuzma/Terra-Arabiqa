@@ -2,6 +2,8 @@ import React from "react";
 import ShopInventory from "./shop.inventory";
 import Preview from "../../components/preview/preview";
 import './shop.style.scss';
+import { motion } from 'framer-motion';
+import { containerVariants } from '../../animations/page-animations';
 
 class Shop extends React.Component {
   constructor(props) {
@@ -15,11 +17,11 @@ class Shop extends React.Component {
   render() {
     const { collection } = this.state;
     return (
-      <div className="shop">
+      <motion.div className="shop" variants={containerVariants} initial="hidden" animate="visible" exit="exit">
         {collection.map(({ id, ...rest }) => (
           <Preview key={id} {...rest} />
         ))}
-      </div>
+      </motion.div>
     );
   }
 }

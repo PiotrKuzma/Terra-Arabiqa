@@ -9,7 +9,7 @@ const Checkout = ({ purchasedItems, purchasedItemsTotal }) => (
     <div className="checkout">
         <div className="checkout__header">
             <div className="checkout__header__cell">
-                <span className="checkout__header__cell">Produkt</span>
+                <span className="checkout__header__cell"></span>
             </div>
             <div className="checkout__header__cell">
                 <span className="checkout__header__cell">Nazwa</span>
@@ -30,7 +30,7 @@ const Checkout = ({ purchasedItems, purchasedItemsTotal }) => (
            ))
         }
         <div className="checkout__total">
-            <span lassName="checkout__total__number"> Razem do zapłaty: {purchasedItemsTotal} zł</span>
+            <span className="checkout__total__number"> Razem do zapłaty: {purchasedItemsTotal} zł</span>
         </div>
     </div>
 )
