@@ -6,6 +6,7 @@ import { connect } from 'react-redux';
 import { selectPurchasedItems } from '../../redux/cart/cart-selectors'
 import { withRouter } from 'react-router-dom';
 import { ToggleCartHidden } from '../../redux/cart/cart.actions';
+import Empty from '../empty-message/empty-message';
 
 const CartDropdown = ({ purchasedItems, history, dispatch }) => (
     <div className="cart-dropdown">
@@ -15,9 +16,11 @@ const CartDropdown = ({ purchasedItems, history, dispatch }) => (
             purchasedItems.map(cartItem => (
                 <CartItem key={cartItem.id} item={cartItem}/>
             ))
-            : <span className="cart-items__empty">Twój koszyk jest pusty</span>
+            :   <Empty/>
             }
         </div>
+        {
+            purchasedItems.length?
         <Unibutton onClick={() => {
             history.push('/checkout')
             dispatch(ToggleCartHidden())
@@ -25,6 +28,8 @@ const CartDropdown = ({ purchasedItems, history, dispatch }) => (
         >
         Podsumowanie
         </Unibutton>
+        : null
+        }
     </div>
 )
 

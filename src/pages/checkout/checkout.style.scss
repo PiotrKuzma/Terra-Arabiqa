@@ -13,19 +13,24 @@ $xanadu: #808F85;
     flex-direction: column;
     align-items: center;
     margin: 50px auto 0;
-    margin-bottom: 20px;
+    margin-bottom:30px;
+    @media only screen and (max-width: 700px) {
+      width: 80%;
+    }
 
     &__header {
       width: 100%;
       padding: 10px 0;
       display: flex;
       justify-content: space-between;
-      border-bottom: 1px solid $void;
 
       &__cell {
         width: 23%;
         font-family: Nunito;
         font-weight: 700;
+        @media only screen and (max-width: 480px) {
+          font-size: 10px;
+        }
 
         &:last-child {
           width: 8%;
@@ -36,8 +41,16 @@ $xanadu: #808F85;
     &__total {
       margin-top: 30px;
       font-weight: 700;
-      margin-left: auto;
+      margin-right: auto;
       font-size: 25x;
       font-family: Nunito;
+      @media only screen and (max-width: 480px) {
+        font-size: 12px;
+      }
+    }
+
+    &__result {
+      margin-right: auto;
+      margin-top: 30px;
     }
   }

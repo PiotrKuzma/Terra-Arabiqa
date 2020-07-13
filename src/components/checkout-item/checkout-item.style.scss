@@ -4,11 +4,11 @@ $burgund: #6a2126;
 .checkout-item {
     width: 100%;
     display: flex;
-    min-height: 100px;
-    border-bottom: 1px solid $void;
     padding: 15px 0;
     font-size: 20px;
     align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid $void;
 
     &__img-container {
       width: 20%;
@@ -25,12 +25,18 @@ $burgund: #6a2126;
         width: 20%;
         font-family: Nunito;
         font-size: 15px;
+        @media only screen and (max-width: 480px) {
+          font-size: 11px;
+        }
     }
     &__quantity,
     &__price {
       width: 23%;
       font-family: Nunito;
       font-size: 15px;
+      @media only screen and (max-width: 480px) {
+        font-size: 11px;
+      }
     }
     &__price {
         margin-left: 3%;
