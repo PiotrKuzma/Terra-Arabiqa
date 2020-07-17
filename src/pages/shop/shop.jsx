@@ -1,29 +1,14 @@
 import React from "react";
-import ShopInventory from "./shop.inventory";
-import Preview from "../../components/preview/preview";
 import './shop.style.scss';
-import { motion } from 'framer-motion';
-import { containerVariants } from '../../animations/page-animations';
+import Overview from '../../components/overview/overview'
+import { Route } from 'react-router-dom';
+import Collection from '../../pages/collection/collection';
 
-class Shop extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      collection: ShopInventory,
-    };
-  }
-
-  render() {
-    const { collection } = this.state;
-    return (
-      <motion.div className="shop" variants={containerVariants} initial="hidden" animate="visible" exit="exit">
-        {collection.map(({ id, ...rest }) => (
-          <Preview key={id} {...rest} />
-        ))}
-      </motion.div>
-    );
-  }
-}
+const Shop = ({ match })=> (
+  <div className="shop">
+    <Route exact path = {`${match.path}`} component={Overview}/>
+    <Route path = {`${match.path}/:categoryId`} component={Collection}/>
+  </div>
+);
 
 export default Shop;

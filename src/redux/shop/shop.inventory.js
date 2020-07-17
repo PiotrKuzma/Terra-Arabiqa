@@ -1,4 +1,4 @@
-const ShopInventory = [
+const shopInventory = [
   {
     id: 1,
     title: "Kawa Prażona",
@@ -131,42 +131,6 @@ const ShopInventory = [
         price: 165,
       },
       {
-        id: 20,
-        name: "Dzbanek do Kawy",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        price: 185,
-      },
-      {
-        id: 21,
-        name: "Filiżanka Espreso",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        price: 165,
-      },
-      {
-        id: 22,
-        name: "Filiżanka Cappuccino",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        price: 165,
-      },
-      {
-        id: 23,
-        name: "Duża Filiżanka",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        price: 165,
-      },
-      {
-        id: 24,
-        name: "Szklanka Latte",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        price: 165,
-      },
-      {
-        id: 25,
-        name: "Szklanka espresso",
-        imageUrl: "https://i.ibb.co/s96FpdP/brown-shearling.png",
-        price: 165,
-      },
-      {
         id: 26,
         name: "Kubek Drwala",
         imageUrl:
@@ -200,27 +164,9 @@ const ShopInventory = [
         imageUrl:
           "https://images.unsplash.com/photo-1498804103079-a6351b050096?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
         price: 80,
-      },
-      {
-        id: 31,
-        name: "Aeropress Complet",
-        imageUrl: "https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png",
-        price: 80,
-      },
-      {
-        id: 32,
-        name: "Zestaw Syropów BIO",
-        imageUrl: "https://i.ibb.co/KmSkMbH/striped-sweater.png",
-        price: 45,
-      },
-      {
-        id: 33,
-        name: "Zestaw Peelingów z Kawy",
-        imageUrl: "https://i.ibb.co/v1cvwNf/yellow-track-suit.png",
-        price: 135,
-      },
+      }
     ],
   },
 ];
 
-export default ShopInventory;
+export default shopInventory;

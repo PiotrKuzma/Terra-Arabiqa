@@ -5,21 +5,21 @@ const INITIAL_STATE = {
           imageUrl:
             "https://images.unsplash.com/photo-1524350876685-274059332603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80",
           id: 1,
-          linkUrl: "kawa",
+          linkUrl: "sklep/kawa",
         },
         {
           title: "Kawiarki",
           imageUrl:
             "https://images.unsplash.com/photo-1491755276353-97642ec79167?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1189&q=80",
           id: 2,
-          linkUrl: "kawiarki",
+          linkUrl: "sklep/kawiarki",
         },
         {
           title: "Akcesoria",
           imageUrl:
             "https://images.unsplash.com/photo-1515592302748-6c5ea17e2f0e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
           id: 3,
-          linkUrl: "akcesoria",
+          linkUrl: "sklep/akcesoria",
         },
         {
           title: "Zestawy",
@@ -27,7 +27,7 @@ const INITIAL_STATE = {
             "https://images.unsplash.com/photo-1439242088854-0c76045f4124?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
 
           id: 4,
-          linkUrl: "zestawy",
+          linkUrl: "sklep/zestawy",
         },
     ],
 };
