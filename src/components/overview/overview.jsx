@@ -4,20 +4,19 @@ import Preview from "../../components/preview/preview";
 import { motion } from 'framer-motion';
 import { containerVariants } from '../../animations/page-animations';
 import { connect } from 'react-redux';
-import { selectShopInventory } from '../../redux/shop/shop.selector';
+import { selectCollectionForOverview } from '../../redux/shop/shop.selector';
 
-
-const Overview = ({ collectionToDisplay })=>
+const Overview = ({ collection })=>
 (
-      <motion.div className="shop" variants={containerVariants} initial="hidden" animate="visible" exit="exit">
-        {collectionToDisplay.map(({ id, ...rest }) => (
-          <Preview key={id} {...rest} />
-        ))}
-      </motion.div>
-    );
+  <motion.div className="shop" variants={containerVariants} initial="hidden" animate="visible" exit="exit">
+    {collection.map(({ id, ...rest }) => (
+      <Preview key={id} {...rest} />
+    ))}
+  </motion.div>
+);
 
 const mapStateToProps = (state) => ({
-  collectionToDisplay: selectShopInventory(state)
+  collection: selectCollectionForOverview(state)
 })
 
 export default connect(mapStateToProps)(Overview);

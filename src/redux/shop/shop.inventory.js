@@ -1,5 +1,5 @@
-const shopInventory = [
-  {
+const shopInventory = {
+  kawa: {
     id: 1,
     title: "Kawa Prażona",
     routeName: "kawa",
@@ -55,7 +55,7 @@ const shopInventory = [
       },
     ],
   },
-  {
+  kawiarki: {
     id: 9,
     title: "Kawiarki",
     routeName: "kawiarki",
@@ -97,7 +97,7 @@ const shopInventory = [
       },
     ],
   },
-  {
+  akcesoria: {
     id: 15,
     title: "Akcesoria",
     routeName: "akcesoria",
@@ -139,7 +139,7 @@ const shopInventory = [
       },
     ],
   },
-  {
+  zestawy: {
     id: 27,
     title: "Zestawy",
     routeName: "zestawy",
@@ -167,6 +167,6 @@ const shopInventory = [
       }
     ],
   },
-];
+};
 
 export default shopInventory;
