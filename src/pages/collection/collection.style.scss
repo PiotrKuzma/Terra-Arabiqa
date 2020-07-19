@@ -2,8 +2,6 @@ $void: #141415;
 $burgund: #6a2126;
 $timberwolf: #DCE0D9;
 $darkpurple: #31081F;
-$davy: #595959;
-$xanadu: #808F85;
 
 .collection {
     display: flex;
@@ -19,6 +17,12 @@ $xanadu: #808F85;
         margin-bottom: 3rem;
         letter-spacing: 5px;
         font-family: Nunito;
+        background-image: linear-gradient(to right bottom, rgba($void, 0.9), rgba($darkpurple, 0.9));
+        display: inline-block;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
     }
 
     &__items {

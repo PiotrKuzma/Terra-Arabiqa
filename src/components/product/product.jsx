@@ -1,8 +1,8 @@
 import React from "react";
 import "./product.style.scss";
-import { ReactComponent as Purchase } from "../../assets/purchase.svg";
 import { connect } from 'react-redux';
 import { addItemToCartArray } from '../../redux/cart/cart.actions';
+import UniButton from '../uniButton/uniButton';
 
 const Product = ({ item, addItemToCartArray }) => {
   const { name, price, imageUrl } = item
@@ -17,13 +17,11 @@ const Product = ({ item, addItemToCartArray }) => {
     <div className="product__footer">
       <span className="product__footer--name">{name}</span>
       <span className="product__footer--price">{price}zł</span>
+      <UniButton
+        onClick={() => addItemToCartArray(item)}
+      >Dodaj do koszyka
+      </UniButton>
     </div>
-    <button className="product__purchase"
-      onClick={() => addItemToCartArray(item)}
-    >
-      <Purchase className="product__purchase__icon"/>
-      <p className="product__purchase__text">Dodaj do koszyka</p>
-    </button>
   </div>
   )
 };
