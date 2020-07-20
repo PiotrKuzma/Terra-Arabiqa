@@ -12,7 +12,7 @@ const descriptionReducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 hidden: !state.hidden
             }
-         case descriptionActionTypes.ADD_ITEM:
+         case descriptionActionTypes.ADD_ITEM_TO_PRESENT:
             return {
                 ...state,
                 itemToPresent: action.payload

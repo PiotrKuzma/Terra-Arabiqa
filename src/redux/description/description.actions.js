@@ -6,6 +6,6 @@ export const ToggleDescriptionHidden = () => ({
 })
 
 export const addItemToDescriptionArray = item => ({
-    type: descriptionActionTypes.ADD_ITEM,
+    type: descriptionActionTypes.ADD_ITEM_TO_PRESENT,
     payload: item
 })
