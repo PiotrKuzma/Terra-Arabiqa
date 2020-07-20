@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { headingVariants } from '../../animations/page-animations';
 import { containerVariants } from '../../animations/page-animations';
 
+
 const Collection = ({ collection }) => {
     const { title, items } = collection;
     return (

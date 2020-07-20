@@ -14,8 +14,12 @@
     right: 40px;
     z-index: 5;
 
+    @media only screen and(max-width: 835px) {
+      top: 390px;
+    }
+
     .cart-items {
-      height: 240px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       overflow: scroll;

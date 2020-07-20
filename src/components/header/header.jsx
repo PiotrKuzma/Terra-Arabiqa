@@ -17,7 +17,7 @@ const Header = ({ appUser, hidden }) => (
       <h1 className="header__logo-container__title">Terra Arabiqa</h1>
     </Link>
     <div className="header__navigation">
-      <Link to="/sklep" className="header__navigation__link">Sklep</Link>
+      <Link to="/sklep" className="header__navigation__link">Polecane</Link>
       <Link to="/sklep" className="header__navigation__link">Kontakt</Link>
       {appUser ? (
         <div

@@ -26,7 +26,7 @@ const CartDropdown = ({ purchasedItems, history, dispatch }) => (
             dispatch(ToggleCartHidden())
             }}
         >
-        Podsumowanie
+        Do kasy
         </Unibutton>
         : null
         }

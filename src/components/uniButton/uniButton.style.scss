@@ -16,6 +16,11 @@ $burgund: #6a2126;
   margin-bottom: 1.3rem;
   transition: all 0.15s ease-in-out;
 
+  @media only screen and(max-width: 587px) {
+    width: 4rem;
+    font-size: 11px;
+  }
+
   &:hover {
     box-shadow: -5px 6px 6px -1px $burgund;
     transform: translateY(-4px);

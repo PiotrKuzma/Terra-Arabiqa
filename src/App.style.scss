@@ -21,5 +21,9 @@ body {
         max-width: 75rem;
         margin: 0 auto;
         position: relative;
+
+        @media only screen and(max-width: 587px) {
+            max-width: 100rem;
+          }
     }
 }
